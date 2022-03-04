@@ -14,6 +14,18 @@ TEST(SquareRootTest, NegativeNos) {
     ASSERT_EQ(-1.0, squareRoot(-0.2));
 }
 
+// Tests factorial of 0.
+TEST(FactorialTest, HandlesZeroInput) {
+  EXPECT_EQ(Factorial(0), 1);
+}
+// Tests factorial of positive numbers.
+TEST(FactorialTest, HandlesPositiveInput) {
+  EXPECT_EQ(Factorial(1), 1);
+  EXPECT_EQ(Factorial(2), 2);
+  EXPECT_EQ(Factorial(3), 6);
+  EXPECT_EQ(Factorial(8), 40320);
+}
+
 TEST(AdditionTest, test2) { 
     ASSERT_EQ(2, addition(1,1));  
     ASSERT_EQ(0, addition(0,0));

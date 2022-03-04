@@ -8,6 +8,16 @@ double squareRoot(const double a) {
     }
 }
 
+int Factorial(int n)    
+{    
+    if(n<0){    
+        return(-1);} /*Wrong value*/      
+    if(n==0){    
+        return(1);}  /*Terminating condition*/    
+    else    
+        {return(n*Factorial(n-1));}    
+}
+
 int addition(int a,int b) {
     return a+b;   
 }

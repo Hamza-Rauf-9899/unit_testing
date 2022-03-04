@@ -28,7 +28,7 @@ TEST(equality_test, test3) {
 
 TEST(check_greater, test4) { 
     ASSERT_EQ(true, greater(1,0));  
-    ASSERT_EQ(true, greater(2,1));
+    ASSERT_EQ(true, greater(2,1)); ///fff
 
 }
 

@@ -1,4 +1,7 @@
 #include <math.h>
+#include <iostream>
+using namespace std;
+
 double squareRoot(const double a) {
     double b = sqrt(a);
     if(b != b) { // nan check
@@ -53,11 +56,16 @@ bool equal(int a,int b){
         return false;
     }
 }
-bool greater(int a,int b){
-    if(a>b){
-        return true;
-    }
-    else{
-        return false;
-    }
-}
+
+
+class BankAccount{
+   public:
+   int balance = 0;
+   void deposite(int amount){
+        balance +=amount;
+   }
+   void deduction (int amount)
+   {
+        balance -=amount;
+   }
+};

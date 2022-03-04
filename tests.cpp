@@ -2,6 +2,35 @@
 #include <limits.h>
 #include <gtest/gtest.h>
 
+class BankAccountTest : public testing::Test{
+        protected:
+        BankAccount *account;
+        void SetUp()
+        {
+                account = new BankAccount;
+                 cout <<"Alive\n";}
+        void TearDown()
+        {
+                delete account;
+                cout <<"Dead\n";
+        }
+};
+TEST_F(BankAccountTest, test3){
+       account->deposite(200);
+       EXPECT_EQ(100,account->balance);}
+
+TEST (BankAccount, test1){
+       BankAccount instance;
+       instance.deposite(100);
+       EXPECT_EQ(100,instance.balance);}
+
+TEST (BankAccount, test2){
+       BankAccount instance;
+       instance.deposite(100);
+      //  ASSERT_EQ(100,instance.balance);
+       ASSERT_EQ(500,instance.balance);
+       instance.deduction(50);
+       EXPECT_EQ(100,instance.balance);}
  
 TEST(SquareRootTest, PositiveNos) { 
     ASSERT_EQ(6, squareRoot(36.0));
@@ -65,13 +94,6 @@ TEST(equality_test, test3) {
     ASSERT_EQ(false, equal(0,1));
 
 }
-
-TEST(check_greater, test4) { 
-    ASSERT_EQ(true, greater(1,0));  
-    ASSERT_EQ(true, greater(2,1)); ///ffff
-
-}
-
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);

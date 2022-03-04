@@ -1,6 +1,7 @@
 #include "totest.cpp"
 #include <limits.h>
 #include <gtest/gtest.h>
+using namespace std;
 
 class BankAccountTest : public testing::Test{
         protected:

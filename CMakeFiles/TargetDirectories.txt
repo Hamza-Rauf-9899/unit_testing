@@ -1,3 +1,0 @@
-/home/hamzapc/Downloads/unit-test/unit2/CMakeFiles/rebuild_cache.dir
-/home/hamzapc/Downloads/unit-test/unit2/CMakeFiles/edit_cache.dir
-/home/hamzapc/Downloads/unit-test/unit2/CMakeFiles/runTests.dir
